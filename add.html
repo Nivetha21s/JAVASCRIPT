@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> add </title>
+    <h2> Grocery List </h2>
+</head>
+<body>
+<ul id="list">
+	<li > Frozen food </li>
+	<li > Salad Dressing </li>
+	<li> Canned Goods </li>
+</ul>
+    <button onclick="addItem()">ADD</button>
+    <button onclick="removeItem()"> Remove</button>
+    <button onclick="replace()"> Replace</button>
+
+    <script type="text/javascript">
+    	function addItem(){
+    list = document.getElementsByTagName('ul')[0];
+    newItem = document.createElement('li');
+    newText = document.createTextNode('Cereals');
+    newItem.appendChild(newText);
+    list.appendChild(newItem);
+    }
+    function removeItem(){
+    list = document.getElementsByTagName('ul')[0];
+    removeMe = document.getElementsByTagName('li')[0];
+    list.removeChild(removeMe);
+    }
+    function replace(){
+    	var list = document.createElement("li");
+  var textnode = document.createTextNode('Pasta');
+  list.appendChild(textnode);
+
+  var item = document.getElementById("list");
+  item.replaceChild(list, item.childNodes[0]);
+}
+    
+    </script>
+</body>
+</html>
