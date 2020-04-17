@@ -29,12 +29,11 @@
     list.removeChild(removeMe);
     }
     function replace(){
-    	var list = document.createElement("li");
-  var textnode = document.createTextNode('Pasta');
-  list.appendChild(textnode);
-
-  var item = document.getElementById("list");
-  item.replaceChild(list, item.childNodes[0]);
+    	var ul = document.getElementById("list");
+    	var li=ul.getElementsByTagName('li');
+        var exval=li[0];
+        var newval="Pasta";
+        exval.innerHTML=newval;
 }
     
     </script>
